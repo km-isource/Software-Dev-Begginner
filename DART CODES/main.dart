@@ -1,3 +1,3 @@
-void> main() async {
+void main() async {
     print("Hello World");
 }
