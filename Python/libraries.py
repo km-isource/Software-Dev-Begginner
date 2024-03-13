@@ -15,12 +15,12 @@ import numpy as np
 # a = np.array([1,2,3,4,5], dtype= complex)
 # print(a)
 
-a = np.arange(0,60,5)
-a = a.reshape(3,4)
-print("Original Array Is")
+a = np.arange(0,100,5)
+a = a.reshape(5,4)
+print("Original Array Is; ")
 print(a)
 print("\n")
-print("Modified array is")
+print("Modified array is: ")
 for x in np.nditer(a):
     print(x)
 
