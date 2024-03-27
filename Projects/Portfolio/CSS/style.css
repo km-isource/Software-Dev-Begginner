@@ -19,13 +19,14 @@
 }
 
 html {
-    font-size: 62.5;
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    margin: 0;
 }
 
 section {
@@ -76,17 +77,26 @@ section {
 
 .home {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.home-img img {
-    width: 35vw;
-}
+
+/* .home-img img{
+    width: 45%;
+    height: 30%;
+    text-align: left;
+} */
+
 
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+
 }
 
 .home-content h1 {
@@ -107,4 +117,49 @@ section {
     height: 4rem;
     background: transparent;
     border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Add animation keyframes */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply animation to social media icons */
+.social-media a {
+ 
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    animation: bounce 0.5s infinite; /* Apply bounce animation on hover */
+}
+
+span {
+    color: var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    /* transition: background-color 0.3s, color 0.3s; */
 }
